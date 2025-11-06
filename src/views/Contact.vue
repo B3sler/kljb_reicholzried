@@ -1,218 +1,246 @@
 <template>
-  <div class="contact-page">
+  <div class="w-full">
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Kontakt</h1>
-        <p class="hero-subtitle">Wir freuen uns auf deine Nachricht!</p>
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-12 md:py-16 text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Kontakt</h1>
+        <p class="text-xl text-white/95">Wir freuen uns auf deine Nachricht!</p>
       </div>
     </section>
 
     <!-- Contact Content -->
-    <section class="contact-content">
-      <div class="container">
-        <div class="content-grid">
+    <section class="py-12 md:py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <!-- Contact Information -->
-          <div class="contact-info">
-            <h2>Kontaktinformationen</h2>
-            
-            <div class="info-block">
-              <div class="icon">📍</div>
-              <div class="info-text">
-                <h3>Adresse</h3>
-                <p>Im Winkel 24</p>
-                <p>87463 Reicholzried</p>
-              </div>
-            </div>
+          <div class="lg:col-span-2">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg sticky top-20">
+              <h2 class="text-2xl font-bold text-primary mb-6">Kontaktinformationen</h2>
+              
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📍</div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Adresse</h3>
+                    <p class="text-gray-600">Im Winkel 24</p>
+                    <p class="text-gray-600">87463 Reicholzried</p>
+                  </div>
+                </div>
 
-            <div class="info-block">
-              <div class="icon">📧</div>
-              <div class="info-text">
-                <h3>E-Mail</h3>
-                <p>
-                  <a href="mailto:kljbreicholzried@t-online.de">
-                    kljbreicholzried@t-online.de
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📧</div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">E-Mail</h3>
+                    <a href="mailto:kljbreicholzried@t-online.de" class="text-primary hover:text-secondary transition-colors">
+                      kljbreicholzried@t-online.de
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">📞</div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Telefon</h3>
+                    <a href="tel:+4983741354" class="text-primary hover:text-secondary transition-colors">
+                      08374 / 1354
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="text-3xl flex-shrink-0">👤</div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Vorstand</h3>
+                    <p class="text-gray-600 font-semibold">Jonas Besler</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media -->
+              <div class="mt-8 pt-8 border-t border-gray-200">
+                <h3 class="font-bold text-primary mb-4">Folge uns auf Social Media</h3>
+                <div class="space-y-3">
+                  <a 
+                    href="https://www.instagram.com/kljb_reicholzried/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all group"
+                  >
+                    <span class="text-2xl">📷</span>
+                    <span class="font-medium">@kljb_reicholzried</span>
                   </a>
+                  <a 
+                    href="https://www.facebook.com/KLJBReicholzried" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all group"
+                  >
+                    <span class="text-2xl">📘</span>
+                    <span class="font-medium">KLJB Reicholzried</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Youth Home Info -->
+              <div class="mt-6 p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border-l-4 border-secondary">
+                <h3 class="font-bold text-primary mb-2">Jugendheim Reicholzried</h3>
+                <p class="text-gray-700 font-semibold">Bildhauerweg 3</p>
+                <p class="text-gray-700">87463 Reicholzried</p>
+                <p class="text-gray-600 text-sm italic mt-2">
+                  Unser Jugendheim ist der zentrale Treffpunkt für alle Aktivitäten.
                 </p>
               </div>
-            </div>
-
-            <div class="info-block">
-              <div class="icon">📞</div>
-              <div class="info-text">
-                <h3>Telefon</h3>
-                <p>
-                  <a href="tel:+4983741354">08374 / 1354</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="info-block">
-              <div class="icon">👤</div>
-              <div class="info-text">
-                <h3>Vorstand</h3>
-                <p><strong>Jonas Besler</strong></p>
-              </div>
-            </div>
-
-            <!-- Social Media -->
-            <div class="social-section">
-              <h3>Folge uns auf Social Media</h3>
-              <div class="social-links">
-                <a href="https://www.instagram.com/kljb_reicholzried/" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="social-link instagram"
-                   aria-label="Instagram">
-                  <span class="icon">📷</span>
-                  <span>@kljb_reicholzried</span>
-                </a>
-                <a href="https://www.facebook.com/KLJBReicholzried" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="social-link facebook"
-                   aria-label="Facebook">
-                  <span class="icon">📘</span>
-                  <span>KLJB Reicholzried</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Youth Home Info -->
-            <div class="youth-home-info">
-              <h3>Jugendheim Reicholzried</h3>
-              <p><strong>Bildhauerweg 3</strong></p>
-              <p>87463 Reicholzried</p>
-              <p class="description">
-                Unser Jugendheim ist der zentrale Treffpunkt für alle unsere Aktivitäten und Veranstaltungen.
-              </p>
             </div>
           </div>
 
           <!-- Contact Form -->
-          <div class="contact-form-section">
-            <h2>Schreib uns eine Nachricht</h2>
-            <form @submit.prevent="handleSubmit" class="contact-form">
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  v-model="formData.name"
-                  required
-                  placeholder="Dein Name"
-                />
-              </div>
+          <div class="lg:col-span-3">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <h2 class="text-2xl font-bold text-primary mb-6">Schreib uns eine Nachricht</h2>
+              <form @submit.prevent="handleSubmit" class="space-y-5">
+                <div>
+                  <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    v-model="formData.name"
+                    required
+                    placeholder="Dein Name"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                  />
+                </div>
 
-              <div class="form-group">
-                <label for="email">E-Mail *</label>
-                <input
-                  type="email"
-                  id="email"
-                  v-model="formData.email"
-                  required
-                  placeholder="deine.email@beispiel.de"
-                />
-              </div>
+                <div>
+                  <label for="email" class="block text-gray-700 font-semibold mb-2">E-Mail *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    v-model="formData.email"
+                    required
+                    placeholder="deine.email@beispiel.de"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                  />
+                </div>
 
-              <div class="form-group">
-                <label for="phone">Telefon (optional)</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  v-model="formData.phone"
-                  placeholder="Deine Telefonnummer"
-                />
-              </div>
+                <div>
+                  <label for="phone" class="block text-gray-700 font-semibold mb-2">Telefon (optional)</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    v-model="formData.phone"
+                    placeholder="Deine Telefonnummer"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                  />
+                </div>
 
-              <div class="form-group">
-                <label for="subject">Betreff *</label>
-                <input
-                  type="text"
-                  id="subject"
-                  v-model="formData.subject"
-                  required
-                  placeholder="Worum geht es?"
-                />
-              </div>
+                <div>
+                  <label for="subject" class="block text-gray-700 font-semibold mb-2">Betreff *</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    v-model="formData.subject"
+                    required
+                    placeholder="Worum geht es?"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                  />
+                </div>
 
-              <div class="form-group">
-                <label for="message">Nachricht *</label>
-                <textarea
-                  id="message"
-                  v-model="formData.message"
-                  required
-                  rows="6"
-                  placeholder="Deine Nachricht an uns..."
-                ></textarea>
-              </div>
+                <div>
+                  <label for="message" class="block text-gray-700 font-semibold mb-2">Nachricht *</label>
+                  <textarea
+                    id="message"
+                    v-model="formData.message"
+                    required
+                    rows="6"
+                    placeholder="Deine Nachricht an uns..."
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                  ></textarea>
+                </div>
 
-              <div class="form-actions">
-                <button type="submit" class="submit-button" :disabled="isSubmitting">
+                <button 
+                  type="submit" 
+                  :disabled="isSubmitting"
+                  class="w-full bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                >
                   {{ isSubmitting ? 'Wird gesendet...' : 'Nachricht senden' }}
                 </button>
-              </div>
 
-              <div v-if="submitMessage" class="submit-message" :class="submitMessageType">
-                {{ submitMessage }}
-              </div>
-            </form>
+                <div v-if="submitMessage" class="p-4 rounded-lg" :class="submitMessageType === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'">
+                  {{ submitMessage }}
+                </div>
 
-            <p class="form-note">
-              * Pflichtfelder<br>
-              <small>Hinweis: Dies ist ein Demo-Formular. Die eingegebenen Daten werden nicht tatsächlich versendet.</small>
-            </p>
+                <p class="text-gray-500 text-sm">
+                  * Pflichtfelder<br>
+                  <span class="text-xs">Hinweis: Dies ist ein Demo-Formular. Die eingegebenen Daten werden nicht tatsächlich versendet.</span>
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Join CTA Section -->
-    <section class="join-section">
-      <div class="container">
-        <h2>Werde Teil unserer Gemeinschaft!</h2>
-        <p>
+    <!-- Join Section -->
+    <section class="py-12 md:py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Werde Teil unserer Gemeinschaft!</h2>
+        <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10">
           Junge Menschen zwischen 14 und 27 Jahren sind herzlich willkommen,
           bei uns mitzumachen. Komm einfach bei einem unserer wöchentlichen Treffen vorbei
           oder kontaktiere uns für mehr Informationen.
         </p>
-        <div class="join-benefits">
-          <div class="benefit">
-            <span class="benefit-icon">🤝</span>
-            <span>Neue Freunde finden</span>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="flex flex-col items-center gap-2">
+            <div class="text-5xl">🤝</div>
+            <span class="text-primary font-semibold">Neue Freunde finden</span>
           </div>
-          <div class="benefit">
-            <span class="benefit-icon">🎉</span>
-            <span>Tolle Events erleben</span>
+          <div class="flex flex-col items-center gap-2">
+            <div class="text-5xl">🎉</div>
+            <span class="text-primary font-semibold">Tolle Events erleben</span>
           </div>
-          <div class="benefit">
-            <span class="benefit-icon">💪</span>
-            <span>Verantwortung übernehmen</span>
+          <div class="flex flex-col items-center gap-2">
+            <div class="text-5xl">💪</div>
+            <span class="text-primary font-semibold">Verantwortung übernehmen</span>
           </div>
-          <div class="benefit">
-            <span class="benefit-icon">🌱</span>
-            <span>Dorf mitgestalten</span>
+          <div class="flex flex-col items-center gap-2">
+            <div class="text-5xl">🌱</div>
+            <span class="text-primary font-semibold">Dorf mitgestalten</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Organization Section -->
-    <section class="organization-section">
-      <div class="container">
-        <h2>Teil einer größeren Bewegung</h2>
-        <p class="org-description">
+    <section class="py-12 md:py-16 bg-gradient-to-br from-primary to-primary-dark text-white text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Teil einer größeren Bewegung</h2>
+        <p class="text-lg leading-relaxed mb-8 text-white/95 max-w-3xl mx-auto">
           Die KLJB Reicholzried ist Teil des KLJB Kreisverbandes Kempten im Diözesanverband Augsburg
           und gehört zur bundesweiten Katholischen Landjugendbewegung.
         </p>
-        <div class="org-links">
-          <a href="https://www.kljb-bayern.de" target="_blank" rel="noopener noreferrer" class="org-link">
+        <div class="flex flex-col md:flex-row justify-center gap-4 max-w-2xl mx-auto">
+          <a 
+            href="https://www.kljb-bayern.de" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-white/10 hover:bg-secondary hover:text-gray-900 text-white px-6 py-3 rounded-full font-semibold border-2 border-white/30 hover:border-secondary transition-all transform hover:-translate-y-1"
+          >
             KLJB Bayern
           </a>
-          <a href="https://kljb-augsburg.de" target="_blank" rel="noopener noreferrer" class="org-link">
+          <a 
+            href="https://kljb-augsburg.de" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-white/10 hover:bg-secondary hover:text-gray-900 text-white px-6 py-3 rounded-full font-semibold border-2 border-white/30 hover:border-secondary transition-all transform hover:-translate-y-1"
+          >
             KLJB Diözesanverband Augsburg
           </a>
-          <a href="https://www.kljb.org" target="_blank" rel="noopener noreferrer" class="org-link">
+          <a 
+            href="https://www.kljb.org" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-white/10 hover:bg-secondary hover:text-gray-900 text-white px-6 py-3 rounded-full font-semibold border-2 border-white/30 hover:border-secondary transition-all transform hover:-translate-y-1"
+          >
             KLJB Bundesverband
           </a>
         </div>
@@ -260,402 +288,3 @@ const handleSubmit = () => {
   }, 1500)
 }
 </script>
-
-<style scoped>
-.contact-page {
-  width: 100%;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1a4a1b 100%);
-  color: var(--white);
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-/* Contact Content */
-.contact-content {
-  padding: 4rem 0;
-  background-color: var(--bg-light);
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-/* Contact Info */
-.contact-info {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info h2 {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.info-block {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: start;
-}
-
-.info-block .icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.info-text h3 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.info-text p {
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 0.25rem;
-}
-
-.info-text a {
-  color: var(--primary-color);
-  transition: color 0.3s ease;
-}
-
-.info-text a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-/* Social Media Section */
-.social-section {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--bg-light);
-}
-
-.social-section h3 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: var(--bg-light);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  color: var(--text-dark);
-}
-
-.social-link:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
-  transform: translateX(5px);
-}
-
-.social-link .icon {
-  font-size: 1.5rem;
-}
-
-/* Youth Home Info */
-.youth-home-info {
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e8 100%);
-  border-radius: 8px;
-  border-left: 4px solid var(--secondary-color);
-}
-
-.youth-home-info h3 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-}
-
-.youth-home-info p {
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 0.25rem;
-}
-
-.youth-home-info .description {
-  margin-top: 0.75rem;
-  font-style: italic;
-  font-size: 0.95rem;
-}
-
-/* Contact Form Section */
-.contact-form-section {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form-section h2 {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  color: var(--text-dark);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.875rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-actions {
-  margin-top: 1rem;
-}
-
-.submit-button {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.submit-button:hover:not(:disabled) {
-  background-color: #1a4a1b;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 95, 45, 0.3);
-}
-
-.submit-button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.submit-message {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 500;
-}
-
-.submit-message.success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.submit-message.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-.form-note {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-.form-note small {
-  font-size: 0.85rem;
-  color: #999;
-}
-
-/* Join Section */
-.join-section {
-  padding: 4rem 0;
-  background-color: var(--white);
-  text-align: center;
-}
-
-.join-section h2 {
-  color: var(--primary-color);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.join-section p {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-}
-
-.join-benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.benefit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.benefit-icon {
-  font-size: 2.5rem;
-}
-
-.benefit span:last-child {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-/* Organization Section */
-.organization-section {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1a4a1b 100%);
-  color: var(--white);
-  text-align: center;
-}
-
-.organization-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.org-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.org-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.org-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  padding: 0.875rem 2rem;
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.org-link:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-dark);
-  border-color: var(--secondary-color);
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .contact-content {
-    padding: 3rem 0;
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-info,
-  .contact-form-section {
-    padding: 2rem;
-  }
-
-  .join-section,
-  .organization-section {
-    padding: 3rem 0;
-  }
-
-  .join-benefits {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .org-links {
-    flex-direction: column;
-    align-items: stretch;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-</style>
