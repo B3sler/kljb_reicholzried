@@ -1,32 +1,59 @@
 <template>
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>KLJB Reicholzried</h3>
-          <p>Katholische Landjugendbewegung</p>
+  <footer class="bg-primary text-white mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- About Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-3 text-secondary">KLJB Reicholzried</h3>
+          <p class="text-white/90">Katholische Landjugendbewegung</p>
+          <p class="text-white/90 mt-2">Seit 1947 in Reicholzried</p>
         </div>
         
-        <div class="footer-section">
-          <h4>Kontakt</h4>
-          <p>Email: info@kljb-reicholzried.de</p>
-          <p>Telefon: +49 (0) XXX XXXXXXX</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Folge uns</h4>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">
-              <span>📘</span>
+        <!-- Contact Section -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3 text-secondary">Kontakt</h4>
+          <p class="text-white/90 mb-1">Im Winkel 24</p>
+          <p class="text-white/90 mb-1">87463 Reicholzried</p>
+          <p class="text-white/90 mb-1">
+            <a href="mailto:kljbreicholzried@t-online.de" class="hover:text-secondary transition-colors">
+              kljbreicholzried@t-online.de
             </a>
-            <a href="#" class="social-link" aria-label="Instagram">
-              <span>📷</span>
+          </p>
+          <p class="text-white/90">
+            <a href="tel:+4983741354" class="hover:text-secondary transition-colors">
+              08374 / 1354
+            </a>
+          </p>
+        </div>
+        
+        <!-- Social Section -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3 text-secondary">Folge uns</h4>
+          <div class="flex space-x-3">
+            <a 
+              href="https://www.facebook.com/KLJBReicholzried" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-xl hover:bg-secondary hover:text-gray-900 transform hover:-translate-y-1 transition-all"
+              aria-label="Facebook"
+            >
+              📘
+            </a>
+            <a 
+              href="https://www.instagram.com/kljb_reicholzried/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-xl hover:bg-secondary hover:text-gray-900 transform hover:-translate-y-1 transition-all"
+              aria-label="Instagram"
+            >
+              📷
             </a>
           </div>
         </div>
       </div>
       
-      <div class="footer-bottom">
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/20 pt-6 text-center text-white/80 text-sm">
         <p>&copy; {{ currentYear }} KLJB Reicholzried. Alle Rechte vorbehalten.</p>
       </div>
     </div>
@@ -38,91 +65,3 @@ import { computed } from 'vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>
-
-<style scoped>
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 3rem 0 1rem;
-  margin-top: auto;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.footer-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color);
-}
-
-.footer-section h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  color: var(--secondary-color);
-}
-
-.footer-section p {
-  margin-bottom: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1.2rem;
-}
-
-.social-link:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-3px);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 0 1rem;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .footer-section {
-    text-align: center;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-}
-</style>

@@ -1,38 +1,114 @@
 <template>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="nav-brand">
-        <router-link to="/" class="brand-link">
-          <h1>KLJB Reicholzried</h1>
-        </router-link>
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center h-16">
+        <!-- Brand -->
+        <div class="flex-shrink-0">
+          <router-link to="/" class="text-xl md:text-2xl font-bold hover:opacity-90 transition-opacity">
+            KLJB Reicholzried
+          </router-link>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button 
+          @click="toggleMenu" 
+          class="md:hidden p-2 rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-white"
+          :aria-expanded="isMenuOpen"
+          aria-label="Hauptmenü"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex md:space-x-8">
+          <li>
+            <router-link 
+              to="/" 
+              class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-secondary transition-colors"
+              active-class="text-secondary"
+            >
+              Start
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/ueber-uns" 
+              class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-secondary transition-colors"
+              active-class="text-secondary"
+            >
+              Über uns
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/termine" 
+              class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-secondary transition-colors"
+              active-class="text-secondary"
+            >
+              Termine
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/kontakt" 
+              class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-secondary transition-colors"
+              active-class="text-secondary"
+            >
+              Kontakt
+            </router-link>
+          </li>
+        </ul>
       </div>
-      
-      <button class="nav-toggle" @click="toggleMenu" :aria-expanded="isMenuOpen">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <ul class="nav-menu" :class="{ 'active': isMenuOpen }">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link" @click="closeMenu">
-            Startseite
+    </div>
+    
+    <!-- Mobile menu -->
+    <div 
+      v-show="isMenuOpen" 
+      class="md:hidden border-t border-primary-dark"
+    >
+      <ul class="px-2 pt-2 pb-3 space-y-1">
+        <li>
+          <router-link 
+            to="/" 
+            @click="closeMenu"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-dark transition-colors"
+            active-class="bg-primary-dark text-secondary"
+          >
+            Start
           </router-link>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" @click="closeMenu">
+        <li>
+          <router-link 
+            to="/ueber-uns" 
+            @click="closeMenu"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-dark transition-colors"
+            active-class="bg-primary-dark text-secondary"
+          >
             Über uns
-          </a>
+          </router-link>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" @click="closeMenu">
-            Veranstaltungen
-          </a>
+        <li>
+          <router-link 
+            to="/termine" 
+            @click="closeMenu"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-dark transition-colors"
+            active-class="bg-primary-dark text-secondary"
+          >
+            Termine
+          </router-link>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" @click="closeMenu">
+        <li>
+          <router-link 
+            to="/kontakt" 
+            @click="closeMenu"
+            class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-dark transition-colors"
+            active-class="bg-primary-dark text-secondary"
+          >
             Kontakt
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -52,132 +128,3 @@ const closeMenu = () => {
   isMenuOpen.value = false
 }
 </script>
-
-<style scoped>
-.navbar {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-brand h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.brand-link {
-  transition: opacity 0.3s ease;
-}
-
-.brand-link:hover {
-  opacity: 0.9;
-}
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.nav-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--white);
-  margin: 3px 0;
-  transition: 0.3s;
-  border-radius: 3px;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-  display: block;
-}
-
-.nav-link:hover {
-  color: var(--secondary-color);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--secondary-color);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.router-link-active {
-  color: var(--secondary-color);
-}
-
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
-  }
-  
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--primary-color);
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .nav-menu.active {
-    max-height: 400px;
-  }
-  
-  .nav-item {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav-link {
-    padding: 1rem;
-  }
-  
-  .nav-link::after {
-    display: none;
-  }
-}
-</style>
