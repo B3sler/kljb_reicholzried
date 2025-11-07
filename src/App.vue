@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex flex-col min-h-screen">
     <NavBar />
-    <main class="main-content">
+    <main class="flex-1">
       <router-view />
     </main>
     <Footer />
@@ -12,15 +12,3 @@
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
 </script>
-
-<style scoped>
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-}
-</style>
